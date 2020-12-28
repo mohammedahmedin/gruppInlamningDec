@@ -80,7 +80,7 @@ function addToCart(product) {
               <td>
           <img src="${product.productImage}" class="img-popup-cart">
       </td>
-            <td>
+            <td class="product-title">
                 ${product.productTitle}
             </td>
             <td class="cart-price">${product.productPrice}</td>
@@ -100,9 +100,9 @@ function addToCart(product) {
 }
 
 function onQuantityChanged(e) {
-  var quant = parseInt(e.value);
+  let quant = parseInt(e.value);
 
-  var productId = e.parentElement
+  let productId = e.parentElement
     .querySelector(".remove")
     .getAttribute("data-id");
   if (quant) {
@@ -113,26 +113,26 @@ function onQuantityChanged(e) {
 }
 
 function updateView() {
-  var productsInCart = getProductsFromStorage();
-  var total = 0;
-  var quantity = 0;
+  let productsInCart = getProductsFromStorage();
+  let total = 0;
+  let quantity = 0;
 
   const cart = document.querySelector(".cart-total"),
     quantSpan = document.querySelector(".cart-icon-quant");
   let totalPriceOnCartSite = document.querySelector(".cart-total-price");
 
   productsInCart.map(function (productInStorage, index) {
-    var price = parseInt(productInStorage.productPrice);
-    var itemQuantity = parseInt(productInStorage.quantity);
+    let price = parseInt(productInStorage.productPrice);
+    let itemQuantity = parseInt(productInStorage.quantity);
     total = total + price * itemQuantity;
   });
 
-  var quant = parseInt(productsInCart.length);
+  quant = parseInt(productsInCart.length);
 
   if (cart) {
     cart.innerHTML = `${total}.00 SEK`;
   }
-  
+
   if (totalPriceOnCartSite) {
     totalPriceOnCartSite.innerHTML = `${total}.00 SEK`;
   }
@@ -261,8 +261,8 @@ function displayCart() {
           <td>
             <img src="${product.productImage}" class="img-in-cart">
           </td>
-              <td>${product.productTitle}</td>
-                <td class="cart-price">${product.productPrice}</td>
+              <td class="inside-cart-title">${product.productTitle}</td>
+                <td class="inside-cart-price">${product.productPrice}</td>
                   <td>
                     <input class="cart-quantity-input cart-quantity-input-in-cart" type="number" onkeyup="onQuantityChanged(this)" onchange="onQuantityChanged(this)" value="${product.quantity}">
                     <button class="remove x-botton-in-cart" onclick="removeProduct(this)" data-id="${product.productId}">X</button>

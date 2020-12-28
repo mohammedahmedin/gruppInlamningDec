@@ -93,7 +93,8 @@ body {
   text-align: center;
   font-family: arial;
   text-decoration: none;
-  margin: 1rem; }
+  margin: 1rem;
+  overflow: hidden; }
 
 .price {
   color: grey;
@@ -117,6 +118,10 @@ body {
   width: 100%;
   min-height: 214.5px;
   object-fit: cover; }
+
+.product-title {
+  font-size: 1.5rem;
+  margin-top: 0.5rem; }
 
 /*for admin page with inputfield*/
 .input--div {
@@ -205,7 +210,8 @@ th,
 td {
   padding: 12px 15px;
   text-align: center;
-  border-bottom: 1px solid #e1e1e1; }
+  border-bottom: 1px solid #e1e1e1;
+  word-wrap: break-word; }
 
 .cart-quantity-input,
 .remove {
@@ -227,6 +233,10 @@ td {
 
 .img-popup-cart {
   width: 60px; }
+
+.cart-title,
+.cart-price {
+  max-width: 6rem; }
 
 .contact-container {
   display: flex;
@@ -554,11 +564,7 @@ td {
   .quantity-popup {
     font-size: 0.9rem;
     width: 40px;
-    height: 30px; }
-  .remove-button-popup {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem; } }
+    height: 30px; } }
 
 @media only screen and (max-width: 767px) {
   .cart--row {
@@ -652,6 +658,11 @@ td {
 @media only screen and (max-width: 767px) {
   .card {
     width: 50%; } }
+
+@media only screen and (max-width: 400px) {
+  .inside-cart-title,
+  .inside-cart-price {
+    max-width: 4rem; } }
 
 @media only screen and (max-width: 280px) {
   .card {
