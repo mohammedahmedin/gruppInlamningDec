@@ -1,12 +1,8 @@
 {
-  "name": "inlgruppsju",
+  "name": "december",
   "version": "1.0.0",
   "description": "",
   "main": "admin.js",
-  "dependencies": {
-    "node-sass": "^5.0.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "start": "node-sass sass/main.scss style.css -w"
   },
@@ -20,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/santarinareyes/gruppInlamningDec/issues"
   },
-  "homepage": "https://github.com/santarinareyes/gruppInlamningDec#readme"
+  "homepage": "https://github.com/santarinareyes/gruppInlamningDec#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
 }

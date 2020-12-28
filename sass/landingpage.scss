@@ -1,19 +1,18 @@
 .landingpage-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /*justify-content: space-around;*/
+  justify-content: space-around;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /*width: 300px;*/
   width: 18rem;
   height: 100%;
   margin: auto;
   text-align: center;
   font-family: arial;
   text-decoration: none;
+  margin: 1rem;
 }
 
 .price {
@@ -39,19 +38,18 @@
 
 .product-image {
   width: 100%;
-  max-height: auto;
-  min-height: 214.5;
+  min-height: 214.5px;
   object-fit: cover;
 }
 
 @media only screen and (max-width: 767px) {
   .card {
     width: 50%;
-}
+  }
 }
 
 @media only screen and (max-width: 280px) {
   .card {
     width: 100%;
-}
+  }
 }
