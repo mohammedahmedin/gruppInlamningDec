@@ -16,18 +16,6 @@ ul {
   display: none;
 }
 
-.cart-menu:hover .cart-content {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  z-index: 1;
-  padding: 1.3rem;
-  min-height: 27rem;
-  min-width: 25rem;
-  background-color: white;
-}
-
 .cart-content {
   text-align: center;
 }
@@ -82,6 +70,7 @@ td {
   padding: 12px 15px;
   text-align: center;
   border-bottom: 1px solid #e1e1e1;
+  word-wrap: break-word;
 }
 
 .cart-quantity-input,
@@ -105,4 +94,13 @@ td {
 
 .nav-link:hover {
   background-color: lightgray;
+}
+
+.img-popup-cart {
+  width: 60px;
+}
+
+.cart-title,
+.cart-price {
+  max-width: 6rem;
 }
