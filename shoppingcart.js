@@ -266,7 +266,7 @@ function displayCart() {
                 <td class="cart-price">${product.productPrice}</td>
                   <td>
                     <input class="cart-quantity-input" type="number" onkeyup="onQuantityChanged(this)" onchange="onQuantityChanged(this)" value="${product.quantity}">
-                    <button class="remove" onclick="removeProduct(this)" data-id="${product.productId}">X</button>
+                    <button class="remove x-botton-in-cart" onclick="removeProduct(this)" data-id="${product.productId}">X</button>
                   </td>
         </tr>
         `;
